@@ -1,4 +1,15 @@
 .footnote {
   position: absolute;
-  bottom: 3em;
+  bottom: -6em;
+  left: 65%;
+}
+
+em {
+  color: cyan;
+}
+
+iframe {
+  height: 450px;
+  width: 850px;
+  top: 0!important;
 }

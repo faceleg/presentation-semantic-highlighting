@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Work/Presentations/presentation-semantic-highlighting/examples/example-syntax.js.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="javascript">
+<meta name="settings" content="no_pre,use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="landscape">
+<style type="text/css">
+<!--
+body { color: #ffffff; background-color: #000000; font-family: monospace; }
+* { font-size: 1em; }
+.Function { color: #87ffff; }
+.Conditional { color: #d75f00; }
+.rainbowParensShell16 { color: #af87d7; }
+.rainbowParensShell15 { color: #af87ff; }
+.rainbowParensShell14 { color: #d7afff; }
+.rainbowParensShell13 { color: #d7afaf; }
+.rainbowParensShell12 { color: #ff00af; }
+.rainbowParensShell11 { color: #ff00d7; }
+.rainbowParensShell10 { color: #ff00ff; }
+.Identifier { color: #87d7ff; }
+.Statement { color: #5fd700; }
+.PreProc { color: #00afff; }
+.Comment { color: #767676; }
+.Boolean { color: #ffff5f; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<div id='vimCodeElement'>
+<span class="Comment">/**</span><br>
+<span class="Comment">&nbsp;* Ensure user has only permissions passed to function</span><br>
+<span class="Comment">&nbsp;*</span><br>
+<span class="Comment">&nbsp;* @name updatePermissions</span><br>
+<span class="Comment">&nbsp;* @param {String[]} permissions Permissions to be applied to user</span><br>
+<span class="Comment">&nbsp;*/</span><br>
+User.prototype.updatePermissions =&nbsp;<span class="Function">function</span><span class="rainbowParensShell16">(</span>permissions<span class="rainbowParensShell16">)</span>&nbsp;<span class="rainbowParensShell16">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;permissions = permissions ||&nbsp;<span class="rainbowParensShell15">[]</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Identifier">var</span>&nbsp;<span class="Statement">self</span>&nbsp;=&nbsp;<span class="Identifier">this</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">self</span>.permissions<span class="rainbowParensShell15">(</span><span class="Boolean">true</span><span class="rainbowParensShell15">)</span>.<span class="PreProc">then</span><span class="rainbowParensShell15">(</span><span class="Function">function</span><span class="rainbowParensShell14">(</span>currentPermissions<span class="rainbowParensShell14">)</span>&nbsp;<span class="rainbowParensShell14">{</span><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentPermissions.<span class="PreProc">forEach</span><span class="rainbowParensShell13">(</span><span class="Function">function</span><span class="rainbowParensShell12">(</span>currentPermission<span class="rainbowParensShell12">)</span>&nbsp;<span class="rainbowParensShell12">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Identifier">var</span>&nbsp;currentPermissionIndex = permissions.indexOf<span class="rainbowParensShell11">(</span>currentPermission.permission<span class="rainbowParensShell11">)</span>;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Comment">// Permission exists in database but not in desired updates</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Conditional">if</span>&nbsp;<span class="rainbowParensShell11">(</span>currentPermissionIndex ===&nbsp;-1<span class="rainbowParensShell11">)</span>&nbsp;<span class="rainbowParensShell11">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;currentPermission.destroy<span class="rainbowParensShell10">()</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="rainbowParensShell11">}</span><br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permissions.splice<span class="rainbowParensShell11">(</span>currentPermissionIndex,&nbsp;1<span class="rainbowParensShell11">)</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="rainbowParensShell12">}</span><span class="rainbowParensShell13">)</span>;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permissions.<span class="PreProc">forEach</span><span class="rainbowParensShell13">(</span><span class="Function">function</span><span class="rainbowParensShell12">(</span>permission<span class="rainbowParensShell12">)</span>&nbsp;<span class="rainbowParensShell12">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">self</span>.permissions.<span class="PreProc">create</span><span class="rainbowParensShell11">(</span><span class="rainbowParensShell10">{</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permission: permission<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="rainbowParensShell10">}</span><span class="rainbowParensShell11">)</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="rainbowParensShell12">}</span><span class="rainbowParensShell13">)</span>;<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="rainbowParensShell14">}</span><span class="rainbowParensShell15">)</span>;<br>
+<span class="rainbowParensShell16">}</span>;<br>
+</div>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->

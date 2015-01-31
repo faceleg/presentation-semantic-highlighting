@@ -41,7 +41,7 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-markdown>
+        <section data-markdown data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
           <script type="text/template">
 # Semantic Highlighting
 
@@ -49,11 +49,54 @@ Michael Robinson <!-- .element: class="footnote" -->
           </script>
         </section>
 
+        <!-- <section data-markdown="markdown/2-geneology.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section> -->
         <section>
-          <h2>Hello There</h2>
-          <p>
-            reveal.js enables you to create beautiful interactive slide decks using HTML. This presentation will show you examples of what it can do.
-          </p>
+
+          <section>
+            <h1>Geneology</h1>
+
+          </section>
+          <section>
+            <h2>First There Was Blob</h2>
+            <ul>
+              <li class="fragment">Displays were monochrome</li>
+              <li class="fragment">Bigger things to worry about than "readability", HCI wasn't a thing</li>
+              <li class="fragment">Back when programming was for hipsters, colours would have been too "mainstream" for them anyway</li>
+            </ul>
+          </section>
+          <section class="iframe">
+            <iframe src="examples/example-blob.js.html"></iframe>
+            <p>Thousands of years reading & writing isn't enough to make code easily understood</p>
+          </section>
+          <section>
+            <h2>The Blob Inherits</h2>
+            <p>Illegible, but inherits or improves upon natural language conventions</p>
+            <ul>
+              <li>Phrase cueing
+                <em>one operation / action per line</em>
+              </li>
+              <li>Visual-syntactic text formatting
+                <em>"indentation"</em>
+              </li>
+              <li>Rigid, clear rules of syntax
+                <em>unlike English</em>
+              </li>
+            </ul>
+          </section>
+
+          <section>
+            <h2>Syntax Highlighting</h2>
+            <ul>
+              <li class="fragment">Ubiquitous</li>
+              <li class="fragment">Colouring based on fixed keywords for the language: <code>function</code>, <code>var</code>, <code>Integer</code>, <code>final</code></li>
+              <li class="fragment">Helps identify portions of text important to the language</li>
+              <li class="fragment">Does not help much with the <em>meaning</em> of what you're reading</li>
+            </ul>
+          </section>
+          <section class="iframe">
+            <iframe src="examples/example-syntax.js.html"/>
+              <p>&nbsp;</p>
+          </section>
         </section>
 
         <!-- Example of nested vertical slides -->
