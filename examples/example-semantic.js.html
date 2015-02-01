@@ -1,0 +1,76 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<title>~/Work/Presentations/presentation-semantic-highlighting/examples/example-semantic.js.html</title>
+<meta name="Generator" content="Vim/7.4">
+<meta name="plugin-version" content="vim7.4_v1">
+<meta name="syntax" content="javascript">
+<meta name="settings" content="no_pre,use_css,no_foldcolumn,expand_tabs,prevent_copy=">
+<meta name="colorscheme" content="landscape">
+<style type="text/css">
+<!--
+body { color: #ffffff; background-color: #000000; font-family: monospace; }
+* { font-size: 1em; }
+.Boolean { color: #ffff5f; }
+.Comment { color: #767676; }
+.Conditional { color: #d75f00; }
+.Function { color: #87ffff; }
+.Identifier { color: #87d7ff; }
+.PreProc { color: #00afff; }
+.Statement { color: #5fd700; }
+._semantic0 { color: #c00000; }
+._semantic1 { color: #008000; }
+._semantic10 { color: #8080ff; }
+._semantic11 { color: #ff40ff; }
+._semantic14 { color: goldenrod; }
+._semantic16 { color: #00afff; }
+._semantic17 { color: #00afff; }
+._semantic3 { color: #00afff; }
+._semantic5 { color: #008080; }
+-->
+</style>
+
+<script type='text/javascript'>
+<!--
+
+-->
+</script>
+</head>
+<body>
+<div id='vimCodeElement'>
+<span class="Comment">/**</span><br>
+<span class="Comment">&nbsp;* Ensure user has only permissions passed to function</span><br>
+<span class="Comment">&nbsp;*</span><br>
+<span class="Comment">&nbsp;* @name updatePermissions</span><br>
+<span class="Comment">&nbsp;* @param {String[]} permissions Permissions to be applied to user</span><br>
+<span class="Comment">&nbsp;*/</span><br>
+<span class="_semantic17">User</span>.<span class="_semantic0">prototype</span>.<span class="_semantic17">updatePermissions</span>&nbsp;=&nbsp;<span class="Function">function</span>(<span class="_semantic5">permissions</span>)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic5">permissions</span>&nbsp;=&nbsp;<span class="_semantic5">permissions</span>&nbsp;||&nbsp;[];<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="Identifier">var</span>&nbsp;<span class="_semantic11">self</span>&nbsp;=&nbsp;<span class="Identifier">this</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic11">self</span>.<span class="_semantic5">permissions</span>(<span class="Boolean">true</span>).<span class="PreProc">then</span>(<span class="Function">function</span>(<span class="_semantic10">currentPermissions</span>)&nbsp;{<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic10">currentPermissions</span>.<span class="PreProc">forEach</span>(<span class="Function">function</span>(<span class="_semantic5">currentPermission</span>)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Identifier">var</span>&nbsp;<span class="_semantic14">currentPermissionIndex</span>&nbsp;=&nbsp;<span class="_semantic5">permissions</span>.<span class="_semantic17">indexOf</span>(<span class="_semantic5">currentPermission</span>.<span class="_semantic1">permission</span>);<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Comment">// Permission exists in database but not in desired updates</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Conditional">if</span>&nbsp;(<span class="_semantic14">currentPermissionIndex</span>&nbsp;=== -1)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic5">currentPermission</span>.<span class="_semantic3">destroy</span>();<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="Statement">return</span>;<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic5">permissions</span>.<span class="_semantic16">splice</span>(<span class="_semantic14">currentPermissionIndex</span>,&nbsp;1);<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic5">permissions</span>.<span class="PreProc">forEach</span>(<span class="Function">function</span>(<span class="_semantic1">permission</span>)&nbsp;{<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="_semantic11">self</span>.<span class="_semantic5">permissions</span>.<span class="PreProc">create</span>({<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;permission:&nbsp;<span class="_semantic1">permission</span><br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+<br>
+&nbsp;&nbsp;&nbsp;&nbsp;});<br>
+};<br>
+</div>
+</body>
+</html>
+<!-- vim: set foldmethod=manual : -->
