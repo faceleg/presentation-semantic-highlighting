@@ -41,17 +41,14 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-markdown data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
-          <script type="text/template">
-            # Semantic Highlighting
+        <section data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
+          <h1>Semantic Highlighting</h1>
 
-            Michael Robinson <!-- .element: class="footnote" -->
-          </script>
+          <p class="footnote">Michael Robinson</p>
         </section>
 
-        <!-- <section data-markdown="markdown/2-geneology.md" data-separator="^\n\n\n" data-separator-vertical="^\n\n" data-separator-notes="^Note:"></section> -->
+        <!-- Geneology -->
         <section>
-
           <section>
             <h1>Geneology</h1>
           </section>
@@ -133,12 +130,10 @@
 
         // Optional reveal.js plugins
       dependencies: [
-      { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-      { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
-      { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/zoom-js/zoom.js', async: true },
-          { src: 'plugin/notes/notes.js', async: true }
+        { src: 'plugin/notes/notes.js', async: true }
       ]
     });
 
