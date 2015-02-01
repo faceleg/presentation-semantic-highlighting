@@ -13,3 +13,16 @@ iframe {
   width: 850px;
   top: 0!important;
 }
+
+.red {
+  color: red;
+}
+.green {
+  color: green;
+}
+.blue {
+  color: blue;
+}
+.grey {
+  color: grey;
+}
