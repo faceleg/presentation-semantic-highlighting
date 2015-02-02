@@ -61,3 +61,11 @@ iframe {
   height: 100%;
   background-size: cover;
 }
+
+.stacked-fragments {
+  position: relative;
+}
+.stacked-fragments .fragment {
+  position: absolute;
+  top: 0;
+}
