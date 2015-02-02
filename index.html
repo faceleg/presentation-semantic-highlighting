@@ -49,8 +49,8 @@
         </section>
 
         <!-- Geneology -->
-        <section class="custom-overlay" data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
-          <section>
+        <section data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
+          <section class="custom-overlay">
             <h1>Geneology</h1>
             <aside class="notes">
               <ul>
@@ -61,21 +61,30 @@
           </section>
 
           <!-- Blob -->
-          <section class="iframe">
+          <section class="iframe custom-overlay">
             <h2>First There Was Blob</h2>
             <iframe src="examples/example-blob.js.html"></iframe>
           </section>
-          <section>
+          <section class="custom-overlay">
             <h2>Blob</h2>
             <ul>
               <li class="fragment">Displays were monochrome</li>
               <li class="fragment">Bigger things to worry about than "readability", HCI wasn't a thing</li>
-              <li class="fragment"><strong><em>TODO</em></strong> Back when programming was for hipsters, colours would have been too "mainstream" for them anyway</li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Back when programming was for hipsters, colours would have been too "mainstream" for them anyway</li>
+              </ul>
+            </aside>
           </section>
-          <section class="iframe">
+          <section class="iframe custom-overlay">
             <iframe src="examples/example-blob.js.html"></iframe>
             <p>Applying techniques from natural languages isn't enough to make code easily understood</p>
+            <aside class="notes">
+              <ul>
+                <li>Although this is still a huge improvement over nothing at all!</li>
+              </ul>
+            </aside>
           </section>
           <section class="custom-overlay">
             <h2>The Blob Inherits</h2>
@@ -88,14 +97,25 @@
                 <em>"indentation"</em>
               </li>
             </ul>
+            <aside class="notes">
+              <ul>
+                <li>Phrase cueing: Observed as early in AD 400, when St. Jerome, patron saint of librarians noticed that some scribes had placed phrases on separate lines as a way to help readers read text aloud</li>
+                <li>Visual-syntactic text formatting: more complex than simple phrase cueing because it identifies not only phrases, but also the hierarchical relations across multiple phrases and clauses
+                  <ul>
+                    <li>Eliminates most eyestrain associated with prolonged reading of text</li>
+                    <li>Been shown to help university students read challenging material efficiently - code is arguably more challenging?</li>
+                  </ul>
+                </li>
+              </ul>
+            </aside>
           </section>
 
           <!-- Syntax Highlighting -->
-          <section class="iframe">
+          <section class="iframe custom-overlay">
             <h2>Syntax Highlighting</h2>
             <iframe src="examples/example-syntax.js.html"></iframe>
           </section>
-          <section>
+          <section class="custom-overlay">
             <h2>Syntax Highlighting</h2>
             <ul>
               <li>Much better than nothing</li>
@@ -104,72 +124,90 @@
               <li class="fragment">Does not help much with the <em>meaning</em> of what you're reading</li>
             </ul>
           </section>
-          <section class="iframe">
+          <section class="iframe custom-overlay">
             <iframe src="examples/example-syntax.js.html"></iframe>
             <p>At least it lets us know where the meat is:<br/> where the colours <em>aren't</em></p>
           </section>
 
           <!-- Semantic Highlighting -->
-          <section class="iframe">
+          <section class="iframe" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
             <h2>Semantic Highlighting</h2>
             <iframe src="examples/example-semantic.js.html"></iframe>
           </section>
-          <section>
+          <section class="custom-overlay" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
             <h2>Semantic Highlighting</h2>
             <ul>
               <li>Extends Syntax Highlighting</li>
               <li class="fragment">Marks individual variables in colour</li>
+              <li class="fragment">Aids in determining <em>flow</em> of code blocks</li>
+              <li class="fragment">Fills the gap none of us noticed in Syntax Highlighting</li>
             </ul>
           </section>
+          <section class="iframe custom-overlay" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+            <iframe src="examples/example-semantic.js.html"></iframe>
+            <div class="stacked-fragments">
+              <p class="fragment fade-out" data-fragment-index="1">It's easier to trace individual values, ignore irrelevancies and generally focus on what you care about!</p>
+              <p class="fragment fade-in" data-fragment-index="1">Like a unicorn <strong class="highlight-rainbow">puking rainbows</strong>, semantically highlighted code fills one with joy, clarity and wisdom.</p>
+            </div>
+          </section>
+        </section>
+
+        <section class="custom-overlay">
+          <h2>References</h2>
+          <ul>
+            <li>
+              <small>
+                Visual-Syntactic Text Formatting: A New Method to Enhance Online Reading (<a href="http://www.readingonline.org/articles/r_walker/">http://www.readingonline.org/articles/r_walker/</a>)
+                <br/>
+                Interesting reading on how to apply VSTF to teaching reading in schools, explanation of why it is effective
+              </small>
+            </li>
+          </ul>
         </section>
       </div>
 
       <div class="canvas"></div>
     </div>
 
-    <!-- <script src="lib/js/jquery.js"></script> -->
-    <!-- <script src="lib/js/stackblur.js"></script> -->
-    <!-- <script src="lib/js/html2canvas.js"></script> -->
+    <script src="lib/js/jquery.js"></script>
+    <script src="lib/js/rainbow.js"></script>
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
     <script>
+      Reveal.initialize({
+        controls: true,
+        progress: true,
+        history: true,
+        center: true,
+        transition: 'slide', // none/fade/slide/convex/concave/zoom
+      // parallaxBackgroundImage: 'https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg',
+      // parallaxBackgroundSize: '5184px 3456px',
 
-      // Full list of configuration options available at:
-      // https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-      controls: true,
-      progress: true,
-      history: true,
-      center: true,
+        dependencies: [
+          { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+          { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+          { src: 'plugin/zoom-js/zoom.js', async: true },
+          { src: 'plugin/notes/notes.js', async: true },
+          { src: 'plugin/remotes/remotes.js', async: true }
+        ]
+      });
 
-      transition: 'slide', // none/fade/slide/convex/concave/zoom
-     // parallaxBackgroundImage: 'https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg',
-     // parallaxBackgroundSize: '5184px 3456px',
-
-        // Optional reveal.js plugins
-      dependencies: [
-        { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
-        { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
-        { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true },
-        { src: 'plugin/remotes/remotes.js', async: true }
-      ]
-    });
-    //window.setTimeout(function() {
-    //html2canvas($("img.background"), { 
-    //  onrendered: function(canvas) {
-    //    $(".canvas").replaceWith(canvas);
-    //    $("canvas").attr("id","canvas");
-    //    stackBlurCanvasRGB('canvas', 0, 0, $("canvas").width(), $("canvas").height(), 20);
-    //  }
-
-    //  });
-    //}, 1000)
-
-
-
+      $('.highlight-rainbow').rainbow({ 
+        colors: [
+          '#FF0000',
+          '#f26522',
+          '#fff200',
+          '#00a651',
+          '#28abe2',
+          '#2e3192',
+          '#6868ff'
+        ],
+        animate: true,
+        animateInterval: 200,
+        pad: false,
+        pauseLength: 100,
+      });
     </script>
-
   </body>
 </html>
