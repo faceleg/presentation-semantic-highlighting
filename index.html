@@ -14,6 +14,7 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
 
+    <link href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="css/reveal.css" />
     <link rel="stylesheet" href="css/theme/black.css" id="theme" />
     <link rel="stylesheet" href="custom-css/css/styles.css" id="semantic-highlighting" />
@@ -48,9 +49,15 @@
         </section>
 
         <!-- Geneology -->
-        <section>
+        <section class="custom-overlay" data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
           <section>
             <h1>Geneology</h1>
+            <aside class="notes">
+              <ul>
+                <li>Semantic highlighing is new and useful, but it stands on the shoulders of a lot of things we take for granted.</li>
+                <li>Behold, the code presentation family tree</li>
+              </ul>
+            </aside>
           </section>
 
           <!-- Blob -->
@@ -70,14 +77,14 @@
             <iframe src="examples/example-blob.js.html"></iframe>
             <p>Applying techniques from natural languages isn't enough to make code easily understood</p>
           </section>
-          <section>
+          <section class="custom-overlay">
             <h2>The Blob Inherits</h2>
             <p>Although illegible still has structure and applies natural language conventions</p>
             <ul>
-              <li>Phrase cueing
+              <li class="fragment">Phrase cueing
                 <em>one operation / action per line</em>
               </li>
-              <li>Visual-syntactic text formatting
+              <li class="fragment">Visual-syntactic text formatting
                 <em>"indentation"</em>
               </li>
             </ul>
@@ -91,7 +98,7 @@
           <section>
             <h2>Syntax Highlighting</h2>
             <ul>
-              <li class="fragment">Much better than nothing</li>
+              <li>Much better than nothing</li>
               <li class="fragment">Colouring based on fixed keywords for the language: <code class="red">function</code>, <code class="blue">var</code>, <code class="green">Integer</code>, <code class="grey">final</code></li>
               <li class="fragment">Helps identify portions of text important to the language</li>
               <li class="fragment">Does not help much with the <em>meaning</em> of what you're reading</li>
@@ -99,7 +106,7 @@
           </section>
           <section class="iframe">
             <iframe src="examples/example-syntax.js.html"></iframe>
-            <p>At least it lets us know where the meat is - where the colours arent</p>
+            <p>At least it lets us know where the meat is:<br/> where the colours <em>aren't</em></p>
           </section>
 
           <!-- Semantic Highlighting -->
@@ -107,12 +114,22 @@
             <h2>Semantic Highlighting</h2>
             <iframe src="examples/example-semantic.js.html"></iframe>
           </section>
+          <section>
+            <h2>Semantic Highlighting</h2>
+            <ul>
+              <li>Extends Syntax Highlighting</li>
+              <li class="fragment">Marks individual variables in colour</li>
+            </ul>
+          </section>
         </section>
-
       </div>
 
+      <div class="canvas"></div>
     </div>
 
+    <!-- <script src="lib/js/jquery.js"></script> -->
+    <!-- <script src="lib/js/stackblur.js"></script> -->
+    <!-- <script src="lib/js/html2canvas.js"></script> -->
     <script src="lib/js/head.min.js"></script>
     <script src="js/reveal.js"></script>
 
@@ -127,15 +144,30 @@
       center: true,
 
       transition: 'slide', // none/fade/slide/convex/concave/zoom
+     // parallaxBackgroundImage: 'https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg',
+     // parallaxBackgroundSize: '5184px 3456px',
 
         // Optional reveal.js plugins
       dependencies: [
         { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
         { src: 'plugin/zoom-js/zoom.js', async: true },
-        { src: 'plugin/notes/notes.js', async: true }
+        { src: 'plugin/notes/notes.js', async: true },
+        { src: 'plugin/remotes/remotes.js', async: true }
       ]
     });
+    //window.setTimeout(function() {
+    //html2canvas($("img.background"), { 
+    //  onrendered: function(canvas) {
+    //    $(".canvas").replaceWith(canvas);
+    //    $("canvas").attr("id","canvas");
+    //    stackBlurCanvasRGB('canvas', 0, 0, $("canvas").width(), $("canvas").height(), 20);
+    //  }
+
+    //  });
+    //}, 1000)
+
+
 
     </script>
 
