@@ -42,15 +42,15 @@
 
       <!-- Any section element inside of this container is displayed as a slide -->
       <div class="slides">
-        <section data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
+        <section data-background="images/6834623345_529e96e7c5_o.jpg">
           <h1>Semantic Highlighting</h1>
 
           <p class="footnote">Michael Robinson</p>
         </section>
 
         <!-- Geneology -->
-        <section data-background="https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg">
-          <section class="custom-overlay">
+        <section>
+          <section class="custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
             <h1>Geneology</h1>
             <aside class="notes">
               <ul>
@@ -61,34 +61,39 @@
           </section>
 
           <!-- Blob -->
-          <section class="iframe custom-overlay">
+          <section class="iframe custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
             <h2>First There Was Blob</h2>
             <iframe src="examples/example-blob.js.html"></iframe>
-          </section>
-          <section class="custom-overlay">
-            <h2>Blob</h2>
-            <ul>
-              <li class="fragment">Displays were monochrome</li>
-              <li class="fragment">Bigger things to worry about than "readability", HCI wasn't a thing</li>
-            </ul>
             <aside class="notes">
               <ul>
-                <li>Back when programming was for hipsters, colours would have been too "mainstream" for them anyway</li>
+                <li>Actually there was a step before this, but it is so far before my time I chose to pretend this is blob</li>
               </ul>
             </aside>
           </section>
-          <section class="iframe custom-overlay">
-            <iframe src="examples/example-blob.js.html"></iframe>
-            <p>Applying techniques from natural languages isn't enough to make code easily understood</p>
+          <section class="custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
+            <p>Probably your idea of coding in Vim</p>
             <aside class="notes">
               <ul>
+                <li>Pre 1990</li>
+                <li>Displays were monochrome</li>
+                <li>Bigger things to worry about than "readability", HCI wasn't a thing</li>
+                <li>Back when programming was for hipsters, colours would have been too "mainstream" for them anyway</li>
+                <li>Vim can do more!</li>
+              </ul>
+            </aside>
+          </section>
+          <section class="iframe custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
+            <iframe src="examples/example-blob.js.html"></iframe>
+            <aside class="notes">
+              <ul>
+                <li>Clearly see that:</li>
+                <li>Applying techniques from natural languages isn't enough to make code easily understood</li>
                 <li>Although this is still a huge improvement over nothing at all!</li>
               </ul>
             </aside>
           </section>
-          <section class="custom-overlay">
-            <h2>The Blob Inherits</h2>
-            <p>Although illegible still has structure and applies natural language conventions</p>
+          <section class="custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
+            <p>Illegible, but has structure and applies natural language conventions</p>
             <ul>
               <li class="fragment">Phrase cueing
                 <em>one operation / action per line</em>
@@ -111,62 +116,173 @@
           </section>
 
           <!-- Syntax Highlighting -->
-          <section class="iframe custom-overlay">
+          <section class="iframe custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
             <h2>Syntax Highlighting</h2>
             <iframe src="examples/example-syntax.js.html"></iframe>
           </section>
-          <section class="custom-overlay">
-            <h2>Syntax Highlighting</h2>
-            <ul>
-              <li>Much better than nothing</li>
-              <li class="fragment">Colouring based on fixed keywords for the language: <code class="red">function</code>, <code class="blue">var</code>, <code class="green">Integer</code>, <code class="grey">final</code></li>
-              <li class="fragment">Helps identify portions of text important to the language</li>
-              <li class="fragment">Does not help much with the <em>meaning</em> of what you're reading</li>
-            </ul>
+          <section class="custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
+            <div class="stacked-fragments">
+              <p class="fragment fade-out">Based on fixed keywords for the language:<br/> <code class="red">function</code> <code class="blue">var</code> <code class="green">Integer</code> <code class="grey">final</code></p>
+              <p class="fragment fade-in">Does not help much with the <strong>meaning</strong>!</p>
+            </div>
+            <aside class="notes">
+              <ul>
+                <li>Much better than nothing</li>
+                <li>Helps identify portions of text important to the language</li>
+                <li>So syntax highlighting helps us keeping an overview or finding the place we’re searching for. However it can _not_ help us actually understanding the code, because by the pure definition of “syntax”, it can only highlight by what the code looks like, not by what the code means, since that requires wider knowledge.</li>
+              </ul>
+            </aside>
           </section>
-          <section class="iframe custom-overlay">
+          <section class="iframe custom-overlay" data-background="images/6834623345_529e96e7c5_o.jpg">
             <iframe src="examples/example-syntax.js.html"></iframe>
             <p>At least it lets us know where the meat is:<br/> where the colours <em>aren't</em></p>
           </section>
+        </section>
 
-          <!-- Semantic Highlighting -->
-          <section class="iframe" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
-            <h2>Semantic Highlighting</h2>
+        <!-- Semantic Highlighting -->
+        <section>
+          <section class="iframe" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+            <h1 class="shadowed-heading">Semantic Highlighting</h1>
+          </section>
+          <section class="iframe" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
             <iframe src="examples/example-semantic.js.html"></iframe>
           </section>
-          <section class="custom-overlay" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+          <section class="custom-overlay" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
             <h2>Semantic Highlighting</h2>
             <ul>
               <li>Extends Syntax Highlighting</li>
-              <li class="fragment">Marks individual variables in colour</li>
+              <li>Marks individual variables in colour</li>
               <li class="fragment">Aids in determining <em>flow</em> of code blocks</li>
+              <li class="fragment">Alerts programmer of typing errors as they happen (even in dynamic languages)</li>
               <li class="fragment">Fills the gap none of us noticed in Syntax Highlighting</li>
             </ul>
           </section>
-          <section class="iframe custom-overlay" data-background-image="http://www.gearboxmagazine.com/wp-content/uploads/2014/02/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+          <section class="custom-overlay" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+            <h1>Surprisingly Old</h1>
+            <ul>
+              <li>Popularised by the blog post "Coding in Color" by Evan Brooks</li>
+              <li>First implemented in KDevelop (heard of it?)</li>
+              <li class="fragment">Aids in determining <em>flow</em> of code blocks</li>
+              <li class="fragment">Alerts programmer of typing errors as they happen (even in dynamic languages)</li>
+              <li class="fragment">Fills the gap none of us noticed in Syntax Highlighting</li>
+            </ul>
+            <aside class="notes">
+              <ul>
+                <li>Evan Brooks came up with this independently</li>
+                <li>First mentioned in 2009, years before "Coding in Color" - medium matters!</li>
+              </ul>
+            </aside>
+          </section>
+          <section class="custom-overlay" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
+            <div class="stacked-fragments">
+              <p class="fragment fade-out">Popularised by the blog post "Coding in Color" by Evan Brooks</p>
+              <p class="fragment fade-in">First implemented in KDevelop (heard of it?)</p>
+            </div>
+            <li class="fragment">Aids in determining <em>flow</em> of code blocks</li>
+            <li class="fragment">Alerts programmer of typing errors as they happen (even in dynamic languages)</li>
+            <li class="fragment">Fills the gap none of us noticed in Syntax Highlighting</li>
+            <aside class="notes">
+              <ul>
+                <li>Evan Brooks came up with this independently</li>
+                <li>First mentioned in 2009, years before "Coding in Color" - medium matters!</li>
+              </ul>
+            </aside>
+          </section>
+          <section class="iframe custom-overlay" data-background-image="images/nyan_cat_by_radulfgreyhammer-d4csvp7-e1393609704270.jpg">
             <iframe src="examples/example-semantic.js.html"></iframe>
             <div class="stacked-fragments">
-              <p class="fragment fade-out" data-fragment-index="1">It's easier to trace individual values, ignore irrelevancies and generally focus on what you care about!</p>
-              <p class="fragment fade-in" data-fragment-index="1">Like a unicorn <strong class="highlight-rainbow">puking rainbows</strong>, semantically highlighted code fills one with joy, clarity and wisdom.</p>
+              <p class="fragment fade-out" data-fragment-index="1">
+                It's easier to trace individual values, ignore irrelevancies and generally focus on what you care about!
+              </p>
+              <p class="fragment fade-in" data-fragment-index="1">
+                Like a unicorn <strong class="highlight-rainbow">puking rainbows</strong>, semantically highlighted code fills one with joy, clarity and wisdom.
+              </p>
             </div>
           </section>
         </section>
 
-        <section class="custom-overlay">
+        <section class="custom-overlay" data-background="images/6834626783_f4e2fe5756_o.jpg">
+          <h2>Experience</h2>
+          <ul>
+            <li>I've been using since December</li>
+            <li>It's helped bring otherwise not obvious issues to my attention (permission/permissions)</li>
+            <li>"At a glance" understanding of code is much deeper</li>
+            <li>Made programming generally more fun</li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Code looks weird without it now</li>
+              <li>Seem to have infected at least one other person</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="custom-overlay" data-background="images/6834626783_f4e2fe5756_o.jpg">
+          <h2>You Want This</h2>
+          <ul class="no-bullets">
+            <li>
+              <a href="https://github.com/jaxbot/semantic-highlight.vim">Vim</a>
+            </li>
+            <li>
+              <a href="https://packagecontrol.io/packages/Colorcoder">Sublime Text 3</a>
+            </li>
+            <li>
+              <a href="https://www.kdevelop.org/">KDevelop</a>
+            </li>
+            <li>
+              <a href="http://blogs.msdn.com/b/vcblog/archive/2011/08/24/10200097.aspx">Visual Studio 2012</a>
+            </li>
+            <li>
+              <a href="https://github.com/kolinkrewinkel/Polychromatic">Xcode</a>
+            </li>
+            <li>
+              Eclipse sucks
+            </li>
+          </ul>
+          <aside class="notes">
+            <ul>
+              <li>Vim: supports blacklists, ignores language specific keywords, colour cache</li>
+              <li>ST3: uses hashing to ensure different colours for variables</li>
+              <li>KDevelop: Does anyone use this?</li>
+              <li>VS 2012: Doesn't look as rainbow as the others</li>
+              <li>Xcode: Limited to 4 colours</li>
+              <li>Eclipse: honest</li>
+            </ul>
+          </aside>
+        </section>
+
+        <section class="custom-overlay" data-background="images/6834626783_f4e2fe5756_o.jpg">
           <h2>References</h2>
           <ul>
             <li>
               <small>
-                Visual-Syntactic Text Formatting: A New Method to Enhance Online Reading (<a href="http://www.readingonline.org/articles/r_walker/">http://www.readingonline.org/articles/r_walker/</a>)
-                <br/>
-                Interesting reading on how to apply VSTF to teaching reading in schools, explanation of why it is effective
+                  <a href="http://www.readingonline.org/articles/r_walker/">Visual-Syntactic Text Formatting: A New Method to Enhance Online Reading</a>
+                  <br/>
+                  Interesting reading on how to apply VSTF to teaching reading in schools, explanation of why it is effective
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="https://medium.com/@evnbr/coding-in-color-3a6db2743a1e">Coding in Color</a>
+                <br/> 
+                The blog post popularising the idea
+              </small>
+            </li>
+            <li>
+              <small>
+                <a href="http://visualstudiomagazine.com/articles/2014/08/01/semantic-code-highlighting.aspx">Semantic Code Highlighting</a>
               </small>
             </li>
           </ul>
         </section>
+        <section class="custom-overlay" data-background="images/6834626783_f4e2fe5756_o.jpg">
+          <h2>Image Credits</h2>
+          <ul>
+            <li>Flowers: <a href="https://www.flickr.com/photos/faceleg/">faceleg (aka Michael Robinson)</a></li>
+            <li>Nyah Cat: <a href="http://radulfgreyhammer.deviantart.com/art/Nyan-Cat-263367547">Radulf Greyhammer</a></li>
+          </ul>
+        </section>
       </div>
-
-      <div class="canvas"></div>
     </div>
 
     <script src="lib/js/jquery.js"></script>
@@ -181,7 +297,7 @@
         history: true,
         center: true,
         transition: 'slide', // none/fade/slide/convex/concave/zoom
-      // parallaxBackgroundImage: 'https://farm8.staticflickr.com/7156/6834623345_529e96e7c5_o.jpg',
+      // parallaxBackgroundImage: 'images/6834623345_529e96e7c5_o.jpg',
       // parallaxBackgroundSize: '5184px 3456px',
 
         dependencies: [

@@ -17,6 +17,10 @@ h2 {
   line-height: 23px;
 }
 
+.small-font {
+  font-size:
+}
+
 .footnote {
   position: absolute;
   bottom: -6em;
@@ -68,4 +72,16 @@ iframe {
 .stacked-fragments .fragment {
   position: absolute;
   top: 0;
+}
+
+.highlight-blue.visible > * {
+  color: #1b91ff!important;
+}
+
+.no-bullets, .no-bullets li {
+  list-style-type: none;
+}
+
+.reveal h1.shadowed-heading {
+  text-shadow: rgb(35, 35, 35) 4px 4px 7px;
 }
