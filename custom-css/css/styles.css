@@ -85,3 +85,9 @@ iframe {
 .reveal h1.shadowed-heading {
   text-shadow: rgb(35, 35, 35) 4px 4px 7px;
 }
+
+.reveal section img.no-style {
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+}
