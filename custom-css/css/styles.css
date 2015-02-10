@@ -91,3 +91,11 @@ iframe {
   background-color: transparent;
   box-shadow: none;
 }
+.angular-js {
+  text-align: center;
+}
+.angular-js img {
+  vertical-align: middle;
+  display: inline-block;
+
+}
